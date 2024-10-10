@@ -1,0 +1,32 @@
+1) Which field of the Customers table is the primary key?
+==> CNUM field is most likely the primary key. 
+This is because:
+It contains unique values for each customer (e.g., 2001, 2002, etc.).
+It represents a unique identifier for each row, which is a typical characteristic of a primary key.
+A primary key ensures that no two rows in a table can have the same value for that column, and it cannot be NULL.
+
+2) What is the 4th column of the Customers table?
+==> Rating
+
+3) What is another word for row? For column?
+==> Rows are also called as tupples and column are also called as attributes.
+
+4) Why isn’t it possible to see the first five rows of a table?
+
+==> In a DBMS, data is stored inside a file
+Inside a file, rows are stored sequentially
+In Dbms; there is concept of row numbering
+In RDBMS, table is not a file; every row is a file
+In RDBMS, rows of the table are not stored squentially; they are not stored in any specific order
+Rows of the table are scattered (fragmented) all over the DB Server HD
+The reason why RDBMS does this is to spend up the INSERT statement
+In a multi-user environment, when multiple users are inserting rows in the same table simultaneously, if MySQL were to store the rows sequentially, then the INSERT statements would be very slow
+When you INSERT a table, wherever MYSQL finds the free space in the DB Server HD, it will store the row there
+When you SELECT from a table, the searching is sequential 
+When you SELECT from a table, the order of rows in the output depends on the row address; it will always be in ascending order of row address
+Once you INSERT a row, the row address is constant
+When you UPDATE a row, if the row length is increasing and the free space is not available, then the entire row is moved to some other address on the DB Server HD
+Later when you SELECT from the table, you may see that row at some other location
+Its only in the case of VARCHAR that the row length may increase or decrease
+Hence it is not possible to see the first 'N' rows of a table, or the last 'N' rows of a table
+this is common for all RDBMS
