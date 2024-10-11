@@ -1,0 +1,20 @@
+Q1. Does ANSI recognize the data type DATE?
+==> No, ANSI SQL does not officially recognize the data type DATE. However, most modern relational database systems (such as MySQL, PostgreSQL, Oracle, and SQL Server) extend ANSI SQL   standards to support DATE as a data type for storing calendar dates.
+
+The SQL standard (ISO/IEC 9075) defines three temporal data types:
+
+DATE – for storing date values (year, month, day).
+TIME – for storing time values (hour, minute, second).
+TIMESTAMP – for storing both date and time.
+While these are widely adopted by various database systems, it’s important to note that they are part of extended SQL standards and not specifically tied to core ANSI SQL.
+
+Q2. Which subdivision of SQL is used to insert values in tables
+==> The Data Manipulation Language (DML) subdivision of SQL is used to insert values into tables. Specifically, the INSERT statement, which falls under DML, is used for this purpose. DML covers operations like:
+
+INSERT – to add new records to a table.
+UPDATE – to modify existing records.
+DELETE – to remove records from a table.
+SELECT – to retrieve data from a table.
+
+
+
