@@ -1,0 +1,122 @@
+Q.1 Write a query that lists each order number followed by the name of the customer 
+who made the order.
+==> SELECT ONUM, CNAME FROM CUSTOMERS, ORDERS
+    WHERE CUSTOMERS.CNUM = ORDERS.CNUM
+    ORDER BY ONUM;
++------+----------+
+| ONUM | CNAME    |
++------+----------+
+| 3001 | Cisneros |
+| 3001 | Cisneros |
+| 3002 | Pereira  |
+| 3002 | Pereira  |
+| 3003 | Hoffman  |
+| 3003 | Hoffman  |
+| 3005 | Liu      |
+| 3005 | Liu      |
+| 3006 | Cisneros |
+| 3006 | Cisneros |
+| 3007 | Grass    |
+| 3007 | Grass    |
+| 3008 | Clemens  |
+| 3008 | Clemens  |
+| 3009 | Giovanni |
+| 3009 | Giovanni |
+| 3010 | Grass    |
+| 3010 | Grass    |
+| 3011 | Clemens  |
+| 3011 | Clemens  |
++------+----------+
+
+Q.2 Write a query that gives the names of both the salesperson and the customer for 
+each order along with the order number.
+==>  SELECT SALESPEOPLE.SNAME, CUSTOMERS.CNAME, ORDERS.ONUM FROM CUSTOMERS,    SALESPEOPLE, ORDERS
+     WHERE CUSTOMERS.SNUM = SALESPEOPLE.SNUM AND CUSTOMERS.CNUM = ORDERS.CNUM
+     ORDER BY SNAME;
++---------+----------+------+
+| SNAME   | CNAME    | ONUM |
++---------+----------+------+
+| Axelrod | Giovanni | 3009 |
+| Axelrod | Giovanni | 3009 |
+| Motika  | Pereira  | 3002 |
+| Motika  | Pereira  | 3002 |
+| Peel    | Hoffman  | 3003 |
+| Peel    | Clemens  | 3008 |
+| Peel    | Clemens  | 3011 |
+| Peel    | Hoffman  | 3003 |
+| Peel    | Clemens  | 3008 |
+| Peel    | Clemens  | 3011 |
+| Rifkin  | Cisneros | 3001 |
+| Rifkin  | Cisneros | 3006 |
+| Rifkin  | Cisneros | 3001 |
+| Rifkin  | Cisneros | 3006 |
+| Serres  | Liu      | 3005 |
+| Serres  | Grass    | 3007 |
+| Serres  | Grass    | 3010 |
+| Serres  | Liu      | 3005 |
+| Serres  | Grass    | 3007 |
+| Serres  | Grass    | 3010 |
++---------+----------+------+
+
+Q.3 Write a query that produces all customers serviced by salespeople with a 
+commission above 12%. Output the customer’s name, the salesperson’s name, and the salesperson’s rate of commission.
+==> SELECT CUSTOMERS.CNAME, SALESPEOPLE.SNAME, SALESPEOPLE.COMM 
+    FROM ORDERS, CUSTOMERS, SALESPEOPLE
+    WHERE CUSTOMERS.SNUM = SALESPEOPLE.SNUM 
+    AND 
+    CUSTOMERS.SNUM = ORDERS.SNUM 
+    AND 
+    SALESPEOPLE.COMM > 0.12
+    ORDER BY CNAME; 
++----------+--------+------+
+| CNAME    | SNAME  | COMM |
++----------+--------+------+
+| Cisneros | Rifkin | 0.15 |
+| Cisneros | Rifkin | 0.15 |
+| Cisneros | Rifkin | 0.15 |
+| Cisneros | Rifkin | 0.15 |
+| Grass    | Serres | 0.13 |
+| Grass    | Serres | 0.13 |
+| Grass    | Serres | 0.13 |
+| Grass    | Serres | 0.13 |
+| Grass    | Serres | 0.13 |
+| Grass    | Serres | 0.13 |
+| Liu      | Serres | 0.13 |
+| Liu      | Serres | 0.13 |
+| Liu      | Serres | 0.13 |
+| Liu      | Serres | 0.13 |
+| Liu      | Serres | 0.13 |
+| Liu      | Serres | 0.13 |
++----------+--------+------+
+Q.4 Write a query that calculates the amount of the salesperson’s commission on each order by a customer with a rating above 100.
+==>  SELECT ORDERS.AMT *(CUSTOMERS.RATING / 100) AS COMMISSION,
+     CUSTOMERS.RATING FROM ORDERS,CUSTOMERS, SALESPEOPLE
+     WHERE ORDERS.SNUM = CUSTOMERS.SNUM  
+     AND 
+     CUSTOMERS.SNUM = SALESPEOPLE.SNUM 
+     AND 
+     CUSTOMERS.RATING > 100
+     ORDER BY COMMISSION;
++------------+--------+
+| COMMISSION | RATING |
++------------+--------+
+|    55.8000 |    300 |
+|    55.8000 |    300 |
+|   151.5000 |    200 |
+|   151.5000 |    200 |
+|   227.2500 |    300 |
+|   227.2500 |    300 |
+|  2619.8999 |    200 |
+|  2619.8999 |    200 |
+|  3294.4801 |    300 |
+|  3294.4801 |    300 |
+|  3426.4600 |    200 |
+|  3426.4600 |    200 |
+|  3929.8499 |    300 |
+|  3929.8499 |    300 |
+| 10320.9004 |    200 |
+| 10320.9004 |    200 |
+| 15481.3506 |    300 |
+| 15481.3506 |    300 |
++------------+--------+
+     
