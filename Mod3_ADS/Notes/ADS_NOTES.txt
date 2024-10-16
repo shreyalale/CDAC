@@ -1,0 +1,1366 @@
+Day 1:
+
+Problem: doubtful situation  which requires solution.
+Stratergy: Day, time, hotel, travel,no. of people..
+Constraint : Budget, Date, Time
+
+Solution:
+1. Define the problem
+2.Analyse the problem
+3. Identify potential solutions
+4. Eval. and choose te best action
+5. Plan of action
+6. Implement and review the results. 
+
+
+Computational Thinking:
+It is a problem solving process that includes
+1. Decomposition:
+Breaking down the data, process or prblems into smaller and managable task
+2. Pattern Recognition
+-observing patterns, trends and regularies in data
+3. Abstraction
+Identifying general principles that generate these patterns
+4. Algorithm Design
+Developing the step by step instructions for solving similar problems.
+
+Basic techniques of logic building:
+1. Flowchart
+2. Algorithm
+3. Pseudo code
+
+Data: Collection of raw facts.
+
+Algorithms: Essence of computational procedure, in step by step manner.
+
+Program: An implementation of an algorithm in some programming language.
+
+Data Structure: Oragnization of data needed to solve the problem
+
+
+
+Algorithm: 
+- A step by step procedure to solve a real time problem or to perform any tasks.
+- Algorithm is a well defined, step by step computational procedure that takes a set of inputs and procduce a desired output.
+Characteristics of algorithms:
+-Finite: Must terminate after a finite number of steps.
+-Definate: Each step must be precisely defined.
+-Input: Takes Zero or more inputs.
+-Output: Produce atleast one output.
+-Effective: Each step mudt be basic and achievable.
+
+
+Types of algorithm stratergy:
+1. Greedy Technique:
+Make locally optimal choice at each step with the hope of finding a global optum.
+Ex: Dijikstra's algorithm
+
+2.Divider & Conquer:
+Breaks the problem into smaller subproblems, solves them recursively, amd combines the results.
+Ex: Merget Sort, Quick Sort
+
+3. Dynamic Programming:
+Solves complex problems by braking them down into simpler subproblems and solving each one.
+Ex: Fibonacci, Knasack problem.- IMP
+
+4. Brute Force
+Tries all possible solutions until the correct one is found
+Ex: String Matching
+
+5. Recursive:
+Solves a problem by solving smaller instances of the same program.
+Ex: Tower of Hanoi - IMP for exam ani interview
+
+6. Search Algorithms:
+Finds an element in data strcutre.
+Ex: Binary Search, Linearl search
+
+7. Sorting Algos.
+Order the elements in particular sequence.
+Ex: Bubble Sort, Selection sort
+
+Algorithm Analaysis
+1. Time Complexity
+-Measure the time of an alogrithm takes  as a funcion as lnput size
+2. Space Complexity
+- Measures of the amount of memory consume by an algorithm uses as a function of the input size.
+3. Big O Notation:
+- Best Case       Symbol: Ω
+- Average Case    Symbol: θ
+-  Worst Case     Symbol: O
+
+
+Data Structures:
+- A way of Oraganizing, managing and storing data to enable efficient access and modification.
+-A data Structure is a particular way of oraganzing, managing and storing data in a computer.
+- It defines the relationship between data, the operations that can be performed on the data and the methods of accessing or modifying it.
+- Data structures are crucial for developing efficient algorithms and are fundamental form handling and processing data in various applications.
+
+Types of Data Structure: 
+1. Linear Data Structure:
+- Data elements are arranged sequentially.
+eg: Arrays, Linked List
+
+2. Non-Linear Data Structure: 
+- Data Elements are arranged hierarchically or in network.
+eg: Trees, Graphs
+
+DS
+- Primitive
+-Non- Primitive
+>Linear
+  =>Arrays
+       - One D              [
+       - Two D                Static DS
+       - Multi D             ]
+   => Linked List
+        - Stack                [
+        - Queue            Dynamic DS
+        -Linked List            ]
+
+> Non- Linear
+       Trees 
+       Graphs
+
+==> Linear: Elelemts Arranged sequnetially
+- Array: Collection of elements stored at contgious memory location
+Ex: Sorted fix data: Contact List
+- Stack: Follows (LIFO)
+Ex: Redo Undo Functionality, Syntax parsing, expression evalution
+- Queue : Follows (FIFO)
+Ex: Printer jo queue, CPU task scheduling
+- Linked List: A linear collection of data elements, where each element point to the next;
+Ex: Implementing queues, stack and graph
+- Hash Table: Stores key- value pairs, offering fast lookup.
+
+==>Non-Linear: Elements arranged hierarchically or in network.
+- Tree: A hierarchical structure with roots,nodes, and edges(Binary tree, avl tree)
+Ex: Hierarchical Data storage (file system), databaser (B-trees)
+- Graph- concsits of nodes (vertices) and connected edges (Directed, undirected)
+Ex: Social network, road maps or web page links
+- Heap: Complete binary tree that maintains a specific order (Min-heap, Max-heap)
+
+
+Operation on Data Structure:
+1. Traversing: Accessing the element.
+2. Searching: Finding the element at particular location.
+3. Insertion: Adding new element.
+4. Deletion: Removing an element.
+5. Sorting: Arrangement elements in a particular order.
+6. Merging: Combining the two data structure into one.
+
+
+Static Data Structure:
+- fixed-size structure that allocates a predefined amount of memory at compile- time
+Charcteristics:
+- Fixed Size:
+- Memory Allocation: 
+- Access Speed:
+- Efficient: 
+
+Eg: 
+class Test {
+psvm(String args[]) {
+int[] arr = new int[5]; //fixed size array length of 5
+arr[0] = 10;
+arr[1] = 20;
+arr[3] = 30;
+Sysout(arr[1]);
+}
+}
+
+Dynamic data structure:
+- Can grow or shrink in size during program execution.
+- allocates memory as needed at  runtime.
+Characteristics:
+- Variable Size: grow or shrink
+- Memory Allocation: runtime
+- Flexibility: 
+- Overhead:
+
+Eg: 
+class Test {
+psvm(String args[]) {
+LinkedList<Integer> dy = new LinkedList<>();
+dy.add(10);
+dy.add(20);
+dy.add(30);
+Sysout(dy.get(1));  //20
+}
+}
+
+HW Difference between linear and non linear data structure
+minimum 8-10 pts
+
+Abstract Data Structure (ADT):
+- ADT is a type or class for objects whose behavior is defined by the set of rules.
+- The defination of ADT only mentions what operations are to be performed but not how to perform or how to implement.
+- It dos not specify how data will be oraganized in memoryand what algorithms are used for implementation. It is called "abstract" because it gives an implementation- independent view.
+
+
+Recursion:
+
+void() {
+test();
+}
+psvm() {
+test();
+}
+
+A recursive method solves problem by calling a copy of itself to work on a smaller problem.
+It is also important to ensure that recursion must terminate.
+Each time the function call itself with a slightly simple version of the original problem.
+Types of Recursion:
+1. Direct Recursion: A function fun() is called direct recursive if it calls the same function.
+eg:
+void fun() {
+fun();
+}
+
+2. Indirect Recursion: A function fun is called indirect recursvie if 
+
+
+Day 2:
+Examples of Recursion:
+- Tower of Hanoi
+- AFactorial
+- Fibonacci Series
+- GCD
+- Printing all permutations of given string
+- Generate all strings of n bits of binary number
+
+Types of Recursion:
+These are two types of recursive call in the function.
+1. Head    2. Tail
+when you give recursive call within function and how the function prograsses to the based case is defined in head and tail recursion
+1. Tail Recursion: It is the recursive call made after all the processing in the function. The function performs its operation first, and the recursive call is the last operation performed before returning
+n * fun(n-1)
+ fun(3)
+ /         \
+3         fun(2)
+             /      \
+            2   fun(1)
+                  /     \
+                 1      fun(0)
+                           |
+                          0
+2. Head Recursion: It is the recursive call made before any other operations or calculations in the function. The function performs after the recursive call.
+fun(n-1) * n
+fun(3)
+/           \
+fun(2)    3
+/        \
+fun(1)  2
+/         \
+fun(0)  1
+
+Backtracking:
+Backtracking is an algortihm stratergy for solving problems by exploring possible solutions and deadend solutions as it is determined they can not lead to the solution.
+problem solving techinique
+- it involves exploration of different paths to find a solution
+- it provides multiple choice, and backtrack each option.
+
+key concepts: 
+1. Partial Solution:
+Backtracking works by building a solution one piece at a time. generallyby adding or modifying paths of the solution in a way that is consistent with the problem constraints.
+
+2.Feasibility Check: 
+The algorithm check whether the currrent partial solution can possibly lead to complete and valid solution. It not, it backtrack.
+
+3. Recursive exploration:
+It is implemented with recursion and algorithm will explores one possibility at a time and recurse into it.
+
+4. Backtrack condition:
+If a solution is found to be invalid or leads to no solution, the algorithm backtracks to the previous step and try alternate route.
+
+Backtrack working:
+1. Initial Decision Point:
+make initial choice for setting parameters for the algorithm.
+2. Recursive exploration:
+for each decision, algorithm proceed recursive.
+3 .Solution check:
+It cheks and make current decision to a valid solution.
+4. Backtrack and try new option:
+If no options are valid the algorithm backtracks to the  previous decision points
+5. Solution:
+Continue till get the solution
+
+Note: 
+CHOOSE ----> EXPLORE ------> BACKTRACK
+
+Applications:
+1. N-Queen Problem 
+   - Placing N queens on an N * N chessboard such that no two queens threaten each other (ekmekancha samor ny alya pahije)
+
+2. Sudoku Solver:
+Filling in the missing numbers in a sudoku puzzle 
+
+3. Maze Solving:
+Finding a path from start to the end in maze.
+
+4. Graph Coloring:
+Assign colors to the vertices of a graph such that no two adjacent vertices have the same color.
+
+5. Subsets/permutation/cobinations:
+Numbers or string text
+
+6. Knapsack problem:
+Solving variations of the knapsack problem by exploring all possible ways to pack items into a knapsack
+
+H/W:
+Difference
+1. Linear non linear ds
+2. static and dynamic ds
+3. Iteration and recursion with code example
+4. Recursion and backtracking
+5. Backtracking and branch and bound technique
+6. Head and tail recursion
+
+Arrays:
+-Finite, ordered and Homogenous
+An array is a finited, ordered and collection of homogeneous data elements.
+  -Finite: contaions limited number of elements.
+ - ordered: elements are stored one byone in contiguous locations of computer memory in a linear fusion.
+ - Homogeneous: all elements of an array are the same data type.
+Need:
+- stores data for processing.
+- Implement different type of data structures such as stack and queue.
+- 2D: Reprensent data in tables and matrix
+- Create dynamic data structure liked list and trees.
+
+Address (A[i]) = M + (i-L) x W
+M =  memory starting address
+ i=index
+L = Lower limit
+w = size of dataype
+
+Size (A) = U - L +1
+U=upper limit
+L=lower limit
+Row Major order:
+Address(aij) = M + (i-1)x n + j -1
+a13 = 100 + (1-1) x 4 + 3 -1
+     = 102
+Column Major order:
+Address(aij) = M + (j-1) x m + i - 1
+a34 = 100 + (4-1) x 3 + 3 - 1
+a33 = 111
+
+Day 3:
+Algorithm Complexity:
+1. Time factor:
+measure by counting the number of key operations such as comarison in the sorting algorithms
+
+2. Space Factor
+Measure by counting the maximum memory space required by the algorithm.
+
+Aysmptotic notation:
+Asymptotic analysis of an algorithm refers to defining the mathematical boundation of its run- time performance. 
+Notation:
+1. Best Case- Minimum time required for program execution  (Ω)
+2. Average Case-  Average time required for program execution (θ)
+3. Worst Case- Maximum time required for program execution (O)
+ swap(a,b) {
+temp =a;  -----> 1sec
+a=b;        -------> 1
+b = temp; --------> 1
+Time: f(n)=3
+o(1) //  conatant 3 represent as order of 1 
+Space 
+swap(a,b) {
+temp =a;  -----> 1unit
+a=b;        -------> 1
+b = temp; --------> 1
+S(n)= 3 unit
+Space ComplexityO(1) 
+
+Examples:
+1. 
+n = 5;
+sum(A, n)
+{
+s=0; -------->1
+for(i=0; i<n; i++)  --------> n+1
+{
+s = s + A[i] --------> n
+}
+return s; ---------> 1
+}
+
+f(n) = 2n+3 //where 2 is coeffient and 3 is constant then we will ignore it and giver preference to higher complexity ----> Linear time complexity
+Time Complexity ==> O(n)
+For space complexity
+A --> n
+n ---> 1
+s ---> 1
+i ----> 1
+n+3 ==> O(n)
+
+2.
+Add(A,B,n)
+{
+for(i=0; i<n; i++) ---> n+1
+{                         --> n
+for(j=0; j<n; j++)  ----> n+1
+{
+c[i,j] = A[i,j] +B[i,j] ----> n
+}
+}
+Time Complexity
+f(n) = 2n^2 +2n +1
+      O(n^2)  O(n)   o(1)
+Quadratic Higher Priority ----> O(n^2)
+
+
+A      n^2
+B      n^2
+C     n^2
+n      1
+i       1
+j       1
+S(n) = 3n^2+3
+          O(n^2)    0(1)
+Space Complexity ==>   O(n^2)
+
+3.
+for(i=0; i<n; i++)                   n+1
+{                                               n
+for(j=0; i<n; j++)                   n+1
+{
+c[i,j] = 0;                                 n
+for(k=0; i<n; k++)                 n+1
+{
+c[i,j] = c[i,j] +A[i,k]+B[k,j]       n
+}
+}
+}
+
+f(n) = 2n^3 +3n^2+2n+1
+Time Complexity: O(n^3)
+
+A       n^2
+B        n^2
+C        n^2
+n       1
+i        1
+j        1
+k       1
+
+S(n) = 3n^2 +4
+Space Complexity: O(n^2)
+
+Priority:
+Best                                                                                               Worst
+1 < log n < root n <  n log n < n^2 < n^3 < ......<2^n < 3^n < n ^n
+Low                                                                                               High
+
+
+Time and Space Complexity for Arrays
+1. Accessing an Element 1-D array:                   T=O(1)  S= O(1)
+2. Inserting at the end 1-D Array:                      T=O(1)  S= O(1)
+3. Inserting at the beginning 1-D Array:            T=O(n)  S=O(n)
+4. Searching in 1-D Array (Linear Search) :        T=O(n)   S=O(1)
+5. Deleting an element in 1-D Array:                 T=O(n)   S=O(1)
+6. Transpose of a matrix in 2-D Array:               T=O(n)   S=O(m*n)    
+
+
+Ex: 
+//accessing
+int arr[] = {1,2,3,4,5};
+int element = arr[2];  //O(1)  : constant
+
+//insertion
+int[] newArr = Arrays.copyOf(arr, arr.length+1);
+newarr[arr.length] = 6;  //O(1)
+
+int[] matrix matrix = {
+{1,2,3}
+{1,2,3}
+{1,2,3}
+}
+int element = matrix[1][1];   //O(1)
+
+
+Stack:
+- Linear Data structure following LIFO (Last-In-First-Out) principle.
+- Insertion and deletion at the one end called as top of the stack
+LIFO:
+The last element inserted is the first one to be deleted.
+
+Represetation of Stack:
+1. Fixed size stack (Static): Array Implementation
+    has a fixed size that cannot grow or shrink.
+    Overflow occurs stack isfull.
+    Underflow occurs stack is empty
+
+2. Dynamic size stack: Linked List representation
+   can grow and shrink
+   
+
+Stack Operations:
+Insertion: Push()
+Deletion: Pop()
+Top Position: peek()
+Underflow: isEmpty()
+Overflow: isFull()
+
+Time and Space Complexity:
+1. push: T=O(1)  S= O(1)
+2. pop:  T=O(1)  S= O(1)
+3. peek/Top:  T=O(1)  S= O(1)
+4. IsEmpty:  T=O(1)  S= O(1)
+5. Size:  T=O(1)  S= O(1)
+6. Stack Storage: S=O(n)
+
+
+Stack Applications:
+1.Balancing of Symbols
+2.String Reversal
+3.Redo/undo
+4.Recursion
+5.Depth First Search(DFS)
+6.Backtracking
+8.Memory management
+
+Advantage:
+- Simplicity
+- Efficiency
+- LIFO
+- Memory Efficent
+
+Expression Evaluation:
+Polish Notation
+1.Infix : A +B :A,B=> OPRANDS, + =>OPERATOR
+2. Prefix: +AB
+3. Postfix: AB+
+
+Operator preference
+1.BODMAS Rule
+2. Brackets, Exponential Symol (^) (*/+-)
+
+Ex: a+(b/c)-d
++a(/bc)-d
+-+a/bcd
+ 
+Day 4:
+
+Queue:
+A linear data structure, that follows FIFO (First-In-First-Out) principle.
+Elements are added at the rear end and removed from the front.
+
+FIFO:
+- The first element, added is the first to be deleted.
+Ex. Bus Queue
+
+-Insertion: Rear
+-Deletion: First
+Applications:
+Memory Management
+Job scheduling
+
+Types: 
+1. Simple Queue:
+-Follow FIFO Strictly
+-Insertion: rear and Deletion: front
+-Insertion: enqueue()
+-Deletion: dequeue()
+
+2. Circular Queue:
+- It is an extension of normal queue where the last element is connected  back to the first element forming a circular queue.
+- FIFO principle
+- Call it as Ring Buffer
+
+Key Parameter: Circular queue can utilize space efficiently by connecting the end back to the front.
+prevents overflow by reusing empty spaces created by dequeue operations.
+-Front: Deletion
+-Rear: Insertion 
+3. Double Ended Queue (Deque)
+It is generalized version of a queue that allows  insertion and deletion of elements from both ends
+Types:
+1. Input restricted deque:output is blocked at single end but allows deletion  at both the end.
+-Insert : one
+-Delete: both
+
+2. Output restricted deque: Input is blocked at single end but allows at insetion both the end.
+-Insert : both
+-Delete: one
+
+insertFront(): enqueue
+insertRear(): enqueue
+deleteFront(): dequeue
+deleteRear(): dequeue
+isEmpty()
+isFull()
+display()
+getdata()
+
+Applications:
+- Web browser: To store browsing history
+- job scheduling:
+
+4. Priority Queue
+-A type of queue where each element has a priority value. Elements with higher priority are processed before those with lower priority.
+
+Properties:
+each element has an associated priority.
+elements with higher priority are dequeued before those with the lower priority.
+It two elements have thesame priority they are served according to their order in the queue
+Interview Question:
+How priority is assigned?
+Priority can be assignmed on the value of the element(higher value = higher priority), (lower value = higher priority)
+
+Operations: 
+Insertion 
+Deletion
+Peek
+
+Types:
+1. Ascending order priority
+Lower value ==> High priority
+Ex: 4 6 8 10 =>  4
+2. Descending order priority
+High value ==> High  priority
+4 6 8 10 => 10
+
+Heap (implement priority queue)
+A special form of complete binary tree that key value of each node is smaller(larger) than value of its children.
+
+Types:
+1.Max Heap:-
+parent key value is greater than or equal to the key value of children
+Parent value = maximum
+
+2. Min Heap:
+parent key value is less than or equal to the key value of children
+parent value = minimum
+
+
+Advantage: 
+-Fast access according to the preference (priority)
+- Real time examples for quick access using priority queue
+Disadvantage:
+-More complex than simpke queue.
+- In higher memory operations, never save the priority.
+
+Application:
+-Graphs algos. (prims algo, krushkals algo)
+-Data compression (Huffman's coding)
+
+properties:
+1. Complete binary tree
+Every level, except possibly the last level is completely filled and all nodes as far as left possible.
+2. Heap order property:
+Max heap
+Min head
+
+Operations:
+1. Insertion
+2. Deletion 
+3. Heapify
+
+
+rules: 
+1. nehmi pahile left side lach node add zala pahije pahile mg right side.
+2. child node peksha parent node mothi value asel tr max heap boltat ani minimum heap asel tr min heap.
+
+Day 5:
+
+Linked List:
+jevha konta new node create hoel point null represent krel.
+- A linked list is a linear data structure consisting of nodes, where each node contains two parts:
+     -data
+     -reference (pointer) to the next node.
+In linked list, the elements are not stored in contigious memory location.
+-Head pointer: It will indicate the first node of linked list & the starting point of linked list.
+
+Terms:
+1. Head: Pointer to first node
+2. Node: It consist of data and pointer(reference ) of next node.
+3. Data: Information stored in the node.
+4. Link: points to the next node in the linked list.
+
+Importance of Linked List:
+1. Dynamic data structure:   memory allocate and deallocate at runtime.
+2. Easy to insert or delete element.:    No need to shift elements.
+3. Efficient memory utilization: No contigious memory required and it can grow and shrink accordingly.
+4. Implmentation of Advanced data Structure: tree and graph
+
+Types:
+1. Singly Linked List
+2. Circular Linked List
+3. Doubly Linked List
+a doubly linked list is a data structure that contains node with references to both the previous and next node.
+It allows traversal, insertion and deletion.
+4. Doubly Circular Linked List
+
+
+Linked List Operation:
+1. Insert at Beginning
+2. Insert at node
+3. Insert at End/last
+
+
+Day 6:
+Deletion using value
+void deleteNode(int key)
+		{
+			Node temp = head, prev = null; 
+		//Deletion at beginning
+		if(temp != null && temp.data == key)
+		{
+			head = temp.next;
+			return;
+		}
+		
+		//Deletion in between 
+		while(temp != null && temp.data != key) 
+		{
+			prev = temp;
+			temp = temp.next;
+		}
+		if(temp == null)
+		return;
+		prev.next = temp.next;
+		
+		}
+
+Deletion of Linkedlist
+void deleteList() 
+{
+head = null;
+}
+
+
+To count the number of nodes in a linked List:
+
+int count()
+{
+
+Node temp = head;
+int c = 0;
+wile (temp != null)
+{
+    c++;
+   temp = temp.next;
+}
+
+
+Recursive program for count number of nodes:
+int countRec(Node node)
+{
+//Node node = head;
+//Base
+if(node == null)
+return 0;
+  return 1 + countRec(node.next);
+}
+countRec(head)
+
+Search an element in a linked list:
+boolean search9Node head, int x)
+{
+Node n  = head;
+while( n! = null)
+{
+   if(n.data == x)
+      return true;    //element found
+  n = n.next;
+}
+   return false;   //element not found
+}
+
+Reverse a Linked List:
+reverse(Node node)
+{
+ prev = null;
+Node current = node;   //node starting pt of  list
+Node next = null;
+
+while (current != null)
+{
+  next = current.next;
+  current.next = prev;
+  prev = current;
+  current = next;
+}
+node = prev;
+return node;
+}
+
+Print middle element of the linked list:
+
+void middlepoint()
+{
+   Node ptr1;   //slowpointer
+   Node ptr2;    //fastpointer
+
+while(ptr1 != null && ptr2 != null)
+{
+   ptr1 = ptr1.next;
+   ptr2 = ptr2.next.next;
+}
+   System.out.println(ptr1.data);
+}
+
+
+Detect a Loop in Linked list:     (CHECK DRY RUN IN RECORDING)
+boolean detectLoop(Node head)
+{
+Node slow=head, fast=head;
+while(fast != null && fast.next != null)
+{
+ slow = slow.next;
+ fast = fast.next.next;
+if(slow == fast)
+return true;
+}
+return false;
+}
+
+
+Merge two sorted linked list:
+
+Node merge(Node l1, l2)
+{
+if (l1 == null)
+return l2;
+if (l2 == null)
+return l1;
+
+if(l1.data < l2.data)
+{
+l1.next = merge(l1.next, l2);
+return l1;
+}
+else {
+l2.next = merge(l1, l2.next);
+return l1;
+}
+}
+
+
+Day 7:
+
+Trees:
+
+Tree is a Non Linear data structure that represents a hierarchical relationship among the various elements.
+Each node in the tree can be further have subtree below it's hierarchy.
+- Node: Each element in tree is refer as node.
+- Root nodes: topmost elements or starting elements
+- Leaf nodes: It refers to node with no children ( jyancha pudhe child nodes nastat)
+- Subtree:  A portion of a tree, which can be named as a element as a seprate tree itself.
+- Children: root of the subtree of a node are call children of node
+- Intermidiate nodes: jyache parent pn astat ani child sudha 
+- Edge:
+- Degree of a node: number of subtrees of a node or number of direct childern connected to a node  in a tree
+- Degree of a tree: highest degree of a node within a tree.
+-Siblings: node with same parents
+-Ancestors: basically higher nodes or grand nodes
+- Decedents: basically leaf nodes or lower nodes of the specific nodes
+- External node: mhanje jyala child nasto ani tyala apn null point ne define krto
+- Depth of tree: Total no of level in tree is depth of tree. (Top to bottom approach)
+- Height of Tree: Total no of level in tree is depth of tree (Bottom to up approach)
+  
+Properties:
+1. The no. of node in tree must be finite and non- empty set.
+2. There must exist a path to every node of a tree.
+3. There must not be any cycle.
+
+Binary Tree: 
+It is a specific type of tree in which each node can have at most tow childre namely left child and right child.
+
+A tree in which every node has at most two children. (0 - 2 no of childrens)
+Eg. 
+1.Strictly Binary Tree
+In which every node except for leaf node has non- empty left and right child.
+2. Complete Binary Tree  
+Binary tree with n node and depth d whose nods corresponds to the  numbered from 0 to n-1 in the full binary tree of depth k 
+numbering form (Left to right)
+3. In complete Binary Tree
+Ekhada node missing kiva order follow ny krt e
+4.  ACBT: Almost complete Binary Tree
+5 . Full Binary Tree
+is a full binay tree if every node has 0 or 2 childrens
+6. Perfect Binary Tree
+
+Properties:
+1. For level starts with 0,
+The maximum no. of nodes on level i of a binaey tree is 2^i,  i >=0
+
+For level starts with 1,
+The maximum no. of nodes on level i of a binaey tree is 2^i-1 , i >=1
+
+2. The maximum no. of nodes in a binary tree of depth k is 2^k+1, where k >= 0
+eg: 2 ^3+1 -1 = @^4 -1 = 16-1=15
+
+3. Maximum no. of nodes in a binary tree binary tree of depth k is 2 ^k -1, where k>=1
+k = 4    2^4-1 = 16-1 =15
+
+4. binary tree if depth d that contain exactly 2^d-1 node.
+
+5. Total no. of nodes in perfect BT = 2^n -1
+
+6. Height of BT:
+n = no. of nodes h = height of tree
+perfect BT = (2^h -1) -1
+
+no. of leafs: 2 ^ h
+no. of non leafs = 2^h+1 = 2^n - 1
+
+Day 8:
+
+Relationship of parent and Left child and Right child:
+For index 0
+LC = 2i + 1
+RC = 2i + 2
+Parent: (i-1) / 2
+
+For Index 1
+Parent: i/2
+LC = 2i 
+RC = 2i +1
+
+
+Representation of tree using Linked List:
+1. Using Array
+2. Using Linked List
+
+Tree Traversal:   IMP
+1. Pre-order: Root, LC, RC
+2. In - order: LC, Root, RC
+3. post- order: LC, RC, Root
+
+Balanced Binary tree:
+A binary tree is balanced if the height of the tree is 0(log n)
+where n = number of nodes
+
+Special Tree:
+1. Binary search tree
+A binary tree DS in which each node has a key and specifies the following rules:
+1. Left subtree of a node contain only nodes with keys less than the root node keys.
+2. Right subtree of a node contain only nodes with keys greater than the root node keys.
+3. both left and right subtree must also be a binary search tree.
+
+Properties of BST:
+1. Binary Tree Strcture:
+- Each node hasat most 2 children.
+2. Ordering Property:
+- Left Subtree <= Root
+- Right Subtree >= Root
+3. Search Property:
+- Search operation is the efficient with time complexity directly proprtional to the height of the tree.
+4. In- order traversal:
+- In order traversal of BST result into ascending sorted order
+5. Efficiency:
+operations like insertion deletion and search
+best case O(log n) => when tree is balanced
+worst case O(n)    => wehn tree is skewed (basically one side lach e)
+
+Drawbacks:
+In order traversak sorted => Tree is graph only one direction
+Result => unbalanced (BST)
+
+Solution: unbalanced (BST) ==> Balanced tree
+1. AVL tree
+2. Red Black Tree
+
+Delete Operation:
+case 1:  Deleting a leaf node
+-Simply remove the node
+case 2:  Delete a node with single child in BST
+-Replace the node with its child
+case 3:  Deleting a node with two child
+Inorder kdhycha ani tyacha sucessor(Exact next)y node ne replace krycha
+(Smallest node in the right subtree) 
+
+Day 9:
+2. AVL Tree  (IMP INTERVIEW POV)
+height- balanced binary search tree.
+every AVL tree is BST but every BST not be AVL tree
+An AVL tree is a self balancing BST where the difference between heights of the left and right subtree (balanced factor) of any node is at most 1.
+Balance Factor = height of left subtree - height of right subtree
+BF = { -1, 0, +1}
+Solution: rotations for balancing the tree
+3. Red Black tree
+4. B tree
+5. B+ Tree
+
+
+Searching
+1. Linear Search
+Best case: O(1)
+Worst case: O(n)
+
+Space complexity: O(1)
+
+2. Binary Search: 
+Worst case: O(log n)
+Best Case: O(n)
+
+Space complexity: O(1)
+
+Sorting:
+Stable and Unstable sorting: 
+If a sorting algo after sorting  the contents , does not change the sequence of similar content in which they appear is called stable sorting.
+If a sorting algo after sorting  the contents , change the sequence of similar content in which they appear is called Unstable sorting.
+
+1. Bubble sort
+Best case: O(n)
+Worst case: O(n^2)
+Space complexity: O(1)
+Stable sorting technique
+Internal Sorting technique
+
+Day 10:
+2. Selection sort:
+Best case:  O(n^2)
+Average case:  O(n^2)
+Worst case: O(n^2)
+Space complexity: O(1)
+Technique: Internal sorting
+Not a stable algorithm.
+
+3. Insertion Sort:
+Best case:  O(n)
+Average case:  O(n^2)
+Worst case: O(n^2)
+Space complexity: O(1)
+Stable sorting technique
+Internal Sorting technique
+
+
+Divide and Conquer Approach:
+it is an algorithm design paradigm that solves as problems using following steps:
+ 1. Divide
+Breaking problem into smaller subproblems
+ 
+ 2. Conquer 
+Solving each problem recursively
+
+ 3. Combine
+Merging  the solutions of subproblems to form the solution to the original problem.
+
+
+characteristics:
+1. Recursion:
+Divide and conquer often uses recursive technique.
+2. Efficieny
+Helps tp reduce complex problem into simple, manangable ones.
+3. Optimal Subsoltion:
+The problem can be broken into smaller subproblems,  each of which is a problem.
+4. Overlapping: subproblems are independent and do no share the data.
+
+Advantage:
+1.   Efficiency: reduces complexity of problem
+2.   Parallelism: Subproblems can often be solved independently, making it suitable for parallel computing.
+3.   Modularity: Problems are solved in a modular way, improving code structure and readability.
+
+Applications:
+1. Searching: Binary Search 
+2. Sorting: Quick and merge sort
+3. Matrix multiplication: Strassen's algorithm
+
+Merge Sort:
+Time Complexity: O(nlogn)
+Space Complextiy: O(n)
+Both sorting: Internal/ External
+Best case:  O(nlogn)
+Average case:  O(n^2)
+Worst case: O(n^2)
+
+Quick sort:
+Best case:  O(nlogn)
+Average case:  O(nlogn)
+Worst case: O(n^2)
+Space Complextiy: O(log n) (due to recursion)
+Not a stable sorting technique
+internal sorting 
+
+Heap sort:
+Best case:  O(nlogn)
+Average case:  O(nlogn)
+Worst case: O(nlogn)
+Space Complextiy: O(1) 
+Not a stable sorting technique
+internal sorting 
+
+Day 11:
+Hashing:
+KEY          ==>       Hash Function       ==> HASH VALUE
+Hash(Key ,Value) 
+Key= Number
+Value= index of hash table
+
+Hashing is a technique used to map data(key) to a unique index in a fixed size table called hash table.
+Primarily used to optimize search, insertion and deletion operation.
+
+- Hashtable is a data structure that stores elements and allows insertion, lookups and deletion to be performed in O(1) time.
+
+In hash table, a hash function is used to map key into position i a table. This is called hashing.
+Operations:
+Search- Compute f(k) & see if a pair exist
+Insert- Compute f(k) & place it at that position
+Delete- Compute f(k) & delete it at that position
+
+Dictionary data type: Trise
+
+Mapping technique: 
+1. Direct Mapping
+Each key is mapped directly to a specific index in the hash table.
+h(x) = 42 % 10 = 2 => index 2
+Problem: Collision same key index yena more than 1 numbers chi
+Solution: Linear probing (next index mdhe place krel value)
+Ex: Book(Red)
+
+2. Division method(modulo method) 
+h(x) = key % table size 
+Drawback: collision
+
+3. Multiplicative method:
+h(x) = floor(table size *(key * A % 1))
+A = Constant( 0 OR 1)
+A key is multiplied by  a constant & the fractional part of the the result is multiplied by the table size to get the index.
+eg: key 42
+    h(x) = floor(10(42 * 0.610 % 1))
+            = 
+
+4. Folding method
+eg: 987654
+     987   654
+    h(x)=  987+ 654 = 1641
+    h(x) 1 = 1641 % table size = inex
+- The key is divided into equal parts, and the parts are added to get the hash index.
+
+5. Mid Square method 
+eg: 4567 
+(4567)^2 = 20857489
+                     h(x)=57(mid) % table size
+
+The key value is squared and the middle digits are extracted to form the index
+
+Collision Handling Techniques:
+1. Seprate chainning (open hashing) 
+   -Linked List
+2. Open addressing (closed hashing)                   -Arryas
+-collision are resolved by finding another empty slot with the hash table
+ a. Linear Probing
+Increment thr index sequentiall until an empty slot is formed.
+          h(key) = (h(key) + i) % table size
+   eg, 25, 35 size = 10
+         25 % 10 = 5
+         35 % 10 = 5
+       (35 + 1) % 10 =6
+  b. quadratic probing
+Next index is found by incrementing the square of the attempted number.
+h(x) = (h(key) + i ^2) % table size
+Ex: Book (Red)
+  c. double hashing 
+h(x) = (h(key) + i * h(key)) % table size
+
+-uses a second half function to determine the step size often  collision
+ h1 = key % table size
+h2 = h1 % table size
+(h1 + i  * h2 ) % table size
+
+Applications:
+1. Database indexing: Hashing is used to index and retrieve data efficiently in databases and other data storage systems.
+2. Password storage: Hashing is used to store passwords securely by applying a hash function to the password and storing the hashed result, rather than the plain text password.
+
+Load factor in hashing
+Load factor ( α ) - measure thate indicate how full a hash table is 
+Load factor ( α )= n / m
+n = no. of elements in hash table
+m = total no. of available slots(buckets)
+
+ α ~ 1
+ α  << 1 ==> Low hashing
+ α  > 1 ==> almost full, high hashing
+
+  Open hashing                                             Closed hashing
+1. Linked list                                                          Arrays
+
+2. Sepreate chaining                               Linear probing, quadratic      
+                                                             probing, quadratic, double     
+
+3. Dynamic size                                                     fixed size   
+
+4. Access time O(n)                                          Access time O(n)     
+
+
+
+
+Time complexity 
+                    Avg. case                      Worst case
+Search            O(1)                                  O(n)
+Insert              O(1)                                  O(n)
+Deletion         O(1)                                  O(n)
+
+Space Complexity
+                        O(n)                                  O(n)
+
+Seprate chaining => O(n +m)   n= keys, m= bucket
+Linear probing   =>  O(m)         m = table size
+
+Graphs:
+A graph is a non linear data structure composed og 2 components:
+1. Vertices (Nodes) => Entity/object
+2. Edges => Connected pairs of vertices
+
+G = (V, E)
+V = Vertices of graph
+E = Connected pair of vertices
+
+Types of Edges:
+1. Undirected edge
+- allows bidirectional flow
+   u _________________ v
+
+2. Directed Edge
+- allows unidirectional flow
+ u-------------------->
+
+ Graph Properties:
+1. Number of edges - undirected graph
+The no. of possible pairs in an n vertices graph is n(n - 1)
+since, edge (u, v) =  edge(v, u)
+The no. of edges is an undirected graphs is 
+n * ( n -1)/ 2
+2. Number edges - directed graph
+The no. of possible pairs in an n vertices graph is n(n - 1)
+since, edge (u, v)  !=  edge(v, u)  ==>     <= n(n - 1)
+The no. of edges is an directed graphs is 
+<= n * ( n -1)
+
+Types of Graphs:  (Blue Book)
+1. Trivial graph:
+2. Null graph:
+3. Disconnected graph   (GFG)
+At least one node is not ireachable from another
+4. Connected Graph       (GFG)
+Every node is reachable from any other node.
+5. Cycle graph
+Where all vertices form a cycle
+6. Cyclic graph
+A graph containing at least one cycle.
+7. Directed Acyclic graph
+8. Weighted Graph
+9. Complete graph
+The graph in which from each node there is an edge to each other node.
+
+Representation of graph:
+1. Adjacency matrix =>2D, Arrays ->
+2. Adjacency List => Linked list -> Dyanmic
+
+Time Complexity -> edge -> O(1)
+Space complexity -> 2D matrix (n * n)
+                                   O(n^2)
+for undirected graph, the matrix is symmetric
+
+Graph Traversals:
+1. DFS (Depth first search)
+Stack DSA   (or recursion dsa)
+Depth wise explore
+Shortes Path- No
+Cycle detection
+Time complexity: O(V + E)
+Space Complexity: O(V)
+Application: Searching path, Backtracking
+
+2. BFS (Bread First Search) 
+Queue DSA
+level by level (breadth wise)
+Cycle detection
+Shortes Path- Yes
+Time complexity: O(V + E)
+Space Complexity: O(V)
+Application: Finding shortest path
+
+Algorithm Stratergy-
+1. Greedy technique
+It is a class of algorithm that makes locally optimal choice at each step, hopeing to get the final optimal solution.
+it works when the problem exhibits-
+1. Greedy choice  property
+ Making the best local choice which leads to global optimal solution.
+2. Optimal Substructure
+The optimal solution can be constructed from the optimal solutions of its subproblem
+
+Steps for creating greedy algorithm
+1. Define the problem:
+Clearly state the objective of the problem to be optimized.
+2. Identify the greedy choice:
+Find the locally optimal choice at each step.
+3. Make the greedy choice:
+Select the best option based on the current state.
+4. Repeat the process:
+Continue making greedy choice until a solution is reached.
+
+Characteristics of Greedy algorithm:
+1. Easy to implement
+2. Fast and efficent in solving problem
+3. Locally optimal choices need at each step.
+4. Decisions are based on current information, past choices cannot be considered
+
+Examples:
+1. Dijikstra's algorithm: finds shortest path in graph
+2. Kruskals algorithm: find the minimum spanning tree
+3. Huffman coding: compreese data by assigning shorter codes to more frequent symbols.
+
+Application:
+1. Task scheduling
+2. Resource Allocation
+3. Data compression
+4. Network design
+
+2. Dynamic Programming
+Method for solving complex problems by breading them into simpler subproblems.
+Key concepts:
+1. Overlapping problem:
+Reapeated calculation for the same problem.
+2. Optimal Substructure:
+The optimal solution to a problem can be constructed from the optimal solution of it's subproblem.
+
+Steps: 
+1. Identify the problem
+2. Solve each subproblem and store the result
+3. Build the solution to the main problem using stored result
+4. Avoid redundant computations by reusing stored solutions.
+
+Approach:
+1. Top Down Aprroach (memorization)
+eg: Recursive fibbonacci
+2. Bottom up Approach (Tabulation)
+eg. Iterative fibonacci using table 
+
+Example:
+1. fibonacci sequnece
+2. Longest common subsequent
+3. Knapsack problem
+4. Shortest path
+
+Comparison
+Greedy:
+locally optimal solution
+Not always guaranted optimal solution
+eg: Dijikstra's algorithm
+
+Dynamic:
+Solve subproblems & builfs up to global solution
+ guaranted optimal solution
+eg: Knapsack problem
+
+Algorithms:
+Shortest Path Algorithm
+Minimum cost spanning Tree
+Mst is a subset of edges from connected weighted graph thst connects all the vertices without any cycles and with minimum possible total edge weight.
+Condition:
+1. Graph connected
+2. Graph undirected
+3. Weights are unique
+
+To identify minimum spanning tree
+1. Knapsak's algo
+2. Prim's algorithm
+RED BOOK
+
+
+          
