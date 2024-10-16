@@ -1,0 +1,34 @@
+Q.1 Write a query that uses a subquery to obtain all orders for the customer named Cisneros. Assume you do not know his customer number (cnum).
+==> SELECT * FROM ORDERS
+    WHERE CNUM = (SELECT CNUM FROM CUSTOMERS WHERE CNAME = 'Cisneros');
++------+---------+------------+------+------+
+| ONUM | AMT     | ODATE      | CNUM | SNUM |
++------+---------+------------+------+------+
+| 3001 |   18.60 | 1990-10-03 | 2008 | 1007 |
+| 3006 | 1098.16 | 1990-10-03 | 2008 | 1007 |
+| 3001 |   18.60 | 1990-10-03 | 2008 | 1007 |
+| 3006 | 1098.16 | 1990-10-03 | 2008 | 1007 |
++------+---------+------------+------+------+
+
+Q.2 Write a query that produces the names and ratings of all customers who have above-average orders.
+==> SELECT CNAME, RATING FROM CUSTOMERS
+    WHERE RATING > (SELECT AVG(RATING) FROM CUSTOMERS);
++----------+--------+
+| CNAME    | RATING |
++----------+--------+
+| Giovanni |    200 |
+| Liu      |    200 |
+| Grass    |    300 |
+| Cisneros |    300 |
++----------+--------+
+
+Q.3 Write a query that selects the total amount in orders for each salesperson for whom this total is greater than the amount of the largest order in the table.
+==> SELECT ORDERS.SNUM,SUM(ORDERS.AMT) FROM ORDERS
+    GROUP BY ORDERS.SNUM
+    HAVING SUM(ORDERS.AMT) > (SELECT MAX(AMT) FROM ORDERS);
++------+-----------------+
+| SNUM | SUM(ORDERS.AMT) |
++------+-----------------+
+| 1001 |        30764.14 |
+| 1002 |        13092.30 |
++------+-----------------+
