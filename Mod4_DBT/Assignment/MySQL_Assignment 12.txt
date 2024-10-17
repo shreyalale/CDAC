@@ -1,0 +1,69 @@
+Q.1 Write a query that selects all customers whose ratings are equal to or greater than ANY of Serres.
+==> SELECT SALESPEOPLE.SNUM, CUSTOMERS.SNAME 
+    FROM SALESPEOPLE, CUSTOMERS 
+    WHERE SALESPEOPLE.SNUM = CUSTOMERS.SNUM AND CUSTOMERS.RATING >= ANY (                 
+    SELECT RATING FROM CUSTOMERS WHERE CITY = 'Serres')
+    GROUP BY SNUM, SNAME;
+ 
+Q.2 Write a query using ANY or ALL that will find all salespeople who have no customers located in their city. 
+==> SELECT SNUM, SNAME FROM SALESPEOPLE	
+    WHERE SALESPEOPLE.CITY != ALL(SELECT CITY FROM CUSTOMERS WHERE    
+    CUSTOMERS.SNUM = SALESPEOPLE.SNUM);
++------+---------+
+| SNUM | SNAME   |
++------+---------+
+| 1004 | Motika  |
+| 1007 | Rifkin  |
+| 1003 | Axelrod |
++------+---------+
+  
+Q.3 Write a query that selects all orders for amounts greater than any of the customers in London. 
+==> SELECT CUSTOMERS.CNUM, ORDERS.AMT FROM ORDERS,CUSTOMERS
+    WHERE CUSTOMERS.CNUM = ORDERS.CNUM 
+    AND ORDERS.AMT > ANY(SELECT AMT FROM ORDERS,CUSTOMERS
+    WHERE ORDERS.CNUM = CUSTOMERS.CNUM AND CUSTOMERS.CITY = 'LONDON');
++------+---------+
+| CNUM | AMT     |
++------+---------+
+| 2007 | 1900.10 |
+| 2003 | 5160.45 |
+| 2008 | 1098.16 |
+| 2002 | 1713.23 |
+| 2006 | 4723.00 |
+| 2004 | 1309.95 |
+| 2006 | 9891.88 |
+| 2007 | 1900.10 |
+| 2003 | 5160.45 |
+| 2008 | 1098.16 |
+| 2002 | 1713.23 |
+| 2006 | 4723.00 |
+| 2004 | 1309.95 |
+| 2006 | 9891.88 |
++------+---------+
+
+Q.4 Write the above query using MIN or MAX.
+==> SELECT CUSTOMERS.CNUM, ORDERS.AMT FROM ORDERS,CUSTOMERS
+    WHERE CUSTOMERS.CNUM = ORDERS.CNUM 
+    AND ORDERS.AMT > (SELECT MIN(ORDERS.AMT) FROM ORDERS,CUSTOMERS
+    WHERE ORDERS.CNUM = CUSTOMERS.CNUM AND CUSTOMERS.CITY = 'LONDON');
++------+---------+
+| CNUM | AMT     |
++------+---------+
+| 2002 | 1713.23 |
+| 2002 | 1713.23 |
+| 2003 | 5160.45 |
+| 2003 | 5160.45 |
+| 2004 | 1309.95 |
+| 2004 | 1309.95 |
+| 2006 | 9891.88 |
+| 2006 | 4723.00 |
+| 2006 | 9891.88 |
+| 2006 | 4723.00 |
+| 2008 | 1098.16 |
+| 2008 | 1098.16 |
+| 2007 | 1900.10 |
+| 2007 | 1900.10 |
++------+---------+
+
+    
+
