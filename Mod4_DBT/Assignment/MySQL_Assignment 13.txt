@@ -1,0 +1,42 @@
+Q.1 Create a union of two queries that shows the names, cities, and ratings of all customers. Those with rating of 200 or greater will also have the words “High Rating”, while the others will have the words “Low Rating”.
+==> SELECT CNAME,CITY,RATING,'HIGH RATING' AS STATUS FROM CUSTOMERS
+    WHERE RATING >= 200
+                 UNION
+    SELECT CNAME,CITY,RATING,'LOW RATING' AS STATUS FROM CUSTOMERS
+    WHERE RATING < 200;
++----------+----------+--------+-------------+
+| CNAME    | CITY     | RATING | STATUS      |
++----------+----------+--------+-------------+
+| Giovanni | Rome     |    200 | HIGH RATING |
+| Liu      | San Jose |    200 | HIGH RATING |
+| Grass    | Berlin   |    300 | HIGH RATING |
+| Cisneros | San Jose |    300 | HIGH RATING |
+| Hoffman  | London   |    100 | LOW RATING  |
+| Clemens  | London   |    100 | LOW RATING  |
+| Pereira  | Rome     |    100 | LOW RATING  |
++----------+----------+--------+-------------+
+
+Q.2 Write a command that produces the name and number of each salesperson and each customer with more than one current order. Put the results in alphabetical order.
+==> SELECT SNAME, SALESPEOPLE.SNUM FROM ORDERS, SALESPEOPLE
+    WHERE ORDERS.SNUM = SALESPEOPLE.SNUM 
+    GROUP BY SNAME, SALESPEOPLE.SNUM
+    HAVING COUNT(ORDERS.SNUM) > 1
+    ORDER BY SNAME ASC;
++---------+------+
+| SNAME   | SNUM |
++---------+------+
+| Axelrod | 1003 |
+| Motika  | 1004 |
+| Peel    | 1001 |
+| Rifkin  | 1007 |
+| Serres  | 1002 |
++---------+------+
+
+Q.3 Form a union of three queries. Have the first select the snums of all salespeople in San Jose; the second, the cnum of all customers in San Jose; and the third the onums of all orders on October 3. Retain duplicates between the last two queries but eliminate any redundancies between either of them and the first. 
+(Note: in the sample tables as given, there would be no such redundancy. This is besides the point.)
+
+SELECT SNUM FROM SALESPEOPLE
+WHERE CITY = 'SAN JOSE'
+         UNION
+SELECT DISTINCT SNUM FROM ORDERS
+WHERE SNUM IN(SELECT SNUM FROM ORDERS WHERE ODATE LIKE '1990-10-03%');
