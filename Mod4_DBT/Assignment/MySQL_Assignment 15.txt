@@ -1,0 +1,37 @@
+Q.1 Assume there is a table called Multicust, with all of the same column definitions as Salespeople. Write a command that inserts all salespeople with more than one customer into this table.    
+
+==>  INSERT INTO MULTICUST
+     SELECT * FROM SALESPEOPLE
+     WHERE SNUM IN (SELECT SNUM FROM CUSTOMERS 
+                    GROUP BY SNUM
+                    HAVING COUNT(CNUM) > 1);
+
+Q.2 Write a command that deletes all customers with no current orders   
+==> DELETE FROM CUSTOMERS
+    WHERE CNUM NOT IN (SELECT CNUM FROM ORDERS);
++------+----------+----------+--------+------+
+| CNUM | CNAME    | CITY     | RATING | SNUM |
++------+----------+----------+--------+------+
+| 2001 | Hoffman  | London   |    100 | 1001 |
+| 2002 | Giovanni | Rome     |    300 | 1003 |
+| 2003 | Liu      | San Jose |    200 | 1004 |
+| 2004 | Grass    | Berlin   |    300 | 1004 |
+| 2008 | Cisneros | San Jose |    300 | 1007 |
+| 2007 | Pereira  | Rome     |    200 | 1004 |
++------+----------+----------+--------+------+
+
+Q.3  Write a command that increases by twenty percent the commissions of all salespeople with total orders above Rs. 3,000.
+==>  UPDATE SALESPEOPLE
+     SET COMM = COMM + COMM * 0.2
+     WHERE SNUM IN (SELECT SNUM FROM ORDERS 
+                    GROUP BY SNUM
+                    HAVING SUM(AMT) > 3000);
++------+---------+-----------+------+
+| SNUM | SNAME   | CITY      | COMM |
++------+---------+-----------+------+
+| 1001 | Peel    | London    | 0.12 |
+| 1004 | Motika  | London    | 0.13 |
+| 1007 | Rifkin  | Barcelona | 0.15 |
+| 1003 | Axelrod | New York  | 0.12 |
+| 1002 | Serres  | San Jose  | 0.16 |
++------+---------+-----------+------+
