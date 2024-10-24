@@ -1,0 +1,136 @@
+<html>
+<head>
+    <title>Sign In / Create Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #dff1ff, #006994);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 800px;
+            height: 400px;
+            background: white;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            overflow: hidden;
+        }
+        .left, .right {
+            width: 50%;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .left {
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .right {
+            background: #47bbf0;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .left h2, .right h2 {
+            margin: 0 0 20px;
+            text-align: center;
+            font-size: 32px; /* Increased font size */
+        }
+        .right h2 {
+            white-space: pre-line; /* Ensure line break */
+            font-size: 36px; /* Increased font size */
+        }
+        .left .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .left .social-icons i {
+            font-size: 24px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .left .social-icons i:hover {
+            color: #47bbf0;;
+        }
+        .left form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .left form input {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            width: 100%;
+        }
+        .left form a {
+            color: #47bbf0;;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .left form button {
+            padding: 8px 16px; /* Decreased button size */
+            border: none;
+            border-radius: 5px;
+            background: #47bbf0;; /* Blue color */
+            color: white;
+            font-size: 14px; /* Decreased font size */
+            cursor: pointer;
+        }
+        .left form button:hover {
+            background:#47bbf0;;
+        }
+        .right button {
+            padding: 10px 20px;
+            border: 2px solid white; /* Added white border */
+            border-radius: 5px;
+            background: #47bbf0;; /* Match background color */
+            color: white; /* Text color white */
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .right button:hover {
+            background: #47bbf0;;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>Sign in</h2>
+            <div class="social-icons">
+                <i class="fab fa-github"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-google"></i>
+            </div>
+            <p>Or sign in using E-Mail Address</p>
+            <form>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a href="#">Forgot your password?</a>
+                <button type="submit">SIGN IN</button>
+            </form>
+        </div>
+        <div class="right">
+            <h2>Create,<br>Account!</h2>
+            <p>Sign up if you still don't have an account ...</p>
+            <button>SIGN UP</button>
+        </div>
+    </div>
+</body>
+</html>
