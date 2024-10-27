@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Sign In - Gourmet Delight</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="images/favicon.ico" rel="icon" type="image/x-icon"/>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="Gourmet Delight Logo" height="40"/>
+    </a>
+    <a href="about.html">About Us</a>
+    <a href="menu.html">Menu</a>
+    <a class="active" href="signin.html">Sign In</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <!-- Sign In Section -->
+  <section class="signin-section">
+    <h1>Sign In</h1>
+    <form action="dashboard.html" method="POST" class="signin-form">
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" required><br><br>
+
+      <button type="submit">Sign In</button>
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign up here</a>.</p>
+  </section>
+
+  <footer>
+    <p>© 2024 Gourmet Delight. All rights reserved.</p>
+    <p>Follow us:
+      <a href="#"><i class="fab fa-facebook"></i> Facebook</a> |
+      <a href="#"><i class="fab fa-instagram"></i> Instagram</a> |
+      <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+    </p>
+  </footer>
+</body>
+</html>
