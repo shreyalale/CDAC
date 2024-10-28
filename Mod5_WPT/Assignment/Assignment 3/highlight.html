@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: rgb(18, 6, 6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .link {
+            color: rgb(245, 63, 130);
+            cursor: pointer;
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+
+        p {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .highlight {
+            color: white;
+        }
+
+        .highlight.active {
+            color: #d44155; 
+        }
+
+        b {
+            color: white;
+            transition: color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+ 
+    <span class="link" onmouseover="highlightBold(true)" onmouseout="highlightBold(false)">
+        [On mouse over here bold words of the following paragraph will be highlighted]
+    </span>
+
+    <p>
+        We have just started <b class="highlight">this</b> section for the users (<b class="highlight">beginner</b> to intermediate) 
+        who <b class="highlight">want</b> to work with <b class="highlight">various</b> JavaScript <b class="highlight">problems</b> 
+        and write scripts online to <b class="highlight">test</b> their JavaScript <b class="highlight">skill</b>.
+    </p>
+
+    <script>
+        function highlightBold(active) {
+            const boldWords = document.querySelectorAll('.highlight');
+            boldWords.forEach(word => {
+                if (active) {
+                    word.classList.add('active');
+                } else {
+                    word.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

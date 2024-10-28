@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Dropdown Item</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        
+        img {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+
+        }
+        #myDropdown {
+            
+            width: 200px;
+            padding: 5px;
+            margin-top: 30px;
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #e7d381;
+            color: #060404;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #f6c46e;
+        }
+
+    </style>
+</head>
+<body>
+    <img src="https://img.freepik.com/free-photo/top-view-eid-al-fitr-celebration-with-delicious-food_23-2151205175.jpg" alt="Food">
+    <select id="myDropdown">
+        <option value ="1">Biryani</option>
+        <option value ="2">Shawrma</option>
+        <option value ="3">Pizza</option>
+        <option value ="4">Pasta</option>
+        <option value ="3">Pani Puri</option>
+    </select>
+    <button onclick="removeSelectedItem()">Remove Selected Item</button>
+
+    <script>
+    function removeSelectedItem(){
+        const dropdown = document.getElementById("myDropdown");
+        dropdown.remove(dropdown.selectIndex);
+    }
+    </script>
+</body>
+</html>
