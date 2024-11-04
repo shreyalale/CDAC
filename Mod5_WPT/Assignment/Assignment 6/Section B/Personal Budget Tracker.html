@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Tracker</title>
+</head>
+<body>
+    <script>
+        // Requirements 1: Variables
+        let expenseList = [];
+        let totalExpense = 0;
+
+        function Expense(description, amount, date) {
+            return { description, amount, date };
+        }
+
+        // Requirement 9: Closure to maintain total expenses
+        const expenseTracker = (() => {
+            let total = 0;
+            return {
+                addExpense: (amount) => (total += amount),
+                getTotal: () => total
+            };
+        })();
+
+        // Requirement 10: Async/Await - Fetch initial expenses (Simulated)
+        async function initialExpense() {
+            const inExpense = await fetchInExpense();
+            inExpense.forEach(exp => addExpense(exp.description, exp.amount, exp.date));
+            displayAllExpense(); 
+        }
+
+        // Requirement 8: Simulate fetching initial expenses with a promise
+        function fetchInExpense() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve([
+                        { description: 'Groceries', amount: 30, date: '2024-11-01' },
+                        { description: 'Utilities', amount: 60, date: '2024-11-02' }
+                    ]);
+                }, 1000);
+            });
+        }
+
+        // Requirement 2: Function to add a single expense
+        function addExpense(description, amount, date) {
+            const newExpense = Expense(description, amount, date);
+            expenseList = [...expenseList, newExpense];
+            expenseTracker.addExpense(amount);
+            displayMessage(() => console.log(`Expense added: ${description}, $${amount}`));
+        }
+
+        // Requirement 7: Callback to display a success message
+        function displayMessage(callback) {
+            callback();
+        }
+
+        // Requirement 2: Arrow Function to calculate total expenses
+        const calculateTotalExpense = () => {
+            return expenseList.reduce((total, exp) => total + exp.amount, 0);
+        };
+
+        // Requirement 5: Filter expenses above a certain amount (e.g., $20)
+        function filterHighExpense(threshold = 20) {
+            return expenseList.filter(exp => exp.amount > threshold);
+        }
+
+        // Requirement 5: Map to display a list of expense descriptions
+        function ExpenseDescriptions() {
+            return expenseList.map(exp => exp.description);
+        }
+
+        // Requirement 4: Display all expenses with destructuring
+        function displayAllExpense() {
+            console.log("All Expenses: ");
+            expenseList.forEach(({ description, amount, date }) => {
+                console.log(`- ${description}: $${amount} on ${date}`);
+            });
+            console.log(`Total Expenses: $${calculateTotalExpense()}`);
+        }
+
+        // Requirement 6: Add multiple expenses at once with rest operator
+        function addMultipleExpense(...expenses) {
+            expenses.forEach(exp => addExpense(exp.description, exp.amount, exp.date));
+        }
+
+        initialExpense(); // Load and display initial expenses
+
+        // Adding individual expenses
+        addExpense("Coffee", 5, "2024-11-03");
+        addExpense("Dining", 25, "2024-11-04");
+
+        // Adding multiple expenses at once
+        addMultipleExpense(
+            { description: "Taxi", amount: 15, date: "2024-11-04" },
+            { description: "Books", amount: 45, date: "2024-11-05" }
+        );
+
+        // Display all expenses
+        displayAllExpense();
+
+        // Filter high expenses and log them
+        console.log("Expenses above $20:", filterHighExpense(20));
+
+        // List all expense descriptions
+        console.log("Expense Descriptions: ", ExpenseDescriptions());
+    </script>
+</body>
+</html>
