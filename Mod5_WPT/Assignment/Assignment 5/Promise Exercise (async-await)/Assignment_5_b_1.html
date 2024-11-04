@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Asynchronous Programming in JavaScript</h1>
+    <i>Promise exercise (async-await):
+    </i>
+    <br>
+    <h3>Q1. Managing Multiple Fetch Operations with Promises.</h3>
+    <script>
+      console.log("Q1. ")
+        const fetchPokemon = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject(new Error("Danger, danger!"));
+    }, 2000);
+  });
+};
+
+console.log("Program starting...");
+
+const usePokemon = async () => {
+  try {
+    const data = await fetchPokemon();
+    console.log(data);
+    console.log("Done fetching...");
+  } catch (error) {
+    console.error(error);
+  }
+  console.log("There was an error with our code but we're ok!");
+};
+
+usePokemon();
+console.log("Program complete!");
+
+    </script>
+    <hr>
+    <h3>Q2. Fetching User Data and Login Validation.</h3>
+    <script>
+      console.log("Q2.")
+        const fetchUser = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve({ data: { user: "Monkey", admin: true } });
+    }, 3000);
+  });
+};
+
+const login = (user) => {
+  if (user.admin === true) {
+    console.log("Successfully logged in!");
+  } else {
+    console.log("Failed to log in, please try again.");
+  }
+};
+
+const useAdmin = async () => {
+  const result = await fetchUser();
+  console.log(result); 
+  login(result.data);
+};
+
+useAdmin();
+console.log("Program complete!");
+    </script>
+    
+</body>
+</html>
