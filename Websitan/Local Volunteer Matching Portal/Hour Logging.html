@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Hours</title>
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/000/623/747/non_2x/hand-care-logo-template-vector-icon-business-symbols.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Ensure body and html take up full height */
+        body, html {
+            font-family: 'Roboto', sans-serif;
+            background-color: #c6e2f9;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        .custom-navbar {
+            background-color: #2c587c; /* New color for navbar */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .custom-navbar .navbar-brand,
+        .custom-navbar .nav-link {
+            color: white !important; /* White text color for links */
+        }
+        .custom-navbar .nav-link:hover {
+            color: hsl(207, 62%, 18%) !important; /* Light blue hover effect */
+        }
+        .navbar-toggler {
+            background-color: #40749f; /* Background color for the toggle button */
+            border:black; /* Remove the border */
+        }
+        /* Full height container for content */
+        .content {
+            flex: 1;
+            padding-bottom: 60px; /* Space for fixed footer */
+        }
+
+        /* Fixed footer styling */
+        .custom-footer {
+            background-color: #2c587c; /* New color for footer */
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg custom-navbar">
+        <a class="navbar-brand" href="index.html">
+            <img src="https://static.vecteezy.com/system/resources/previews/000/623/747/non_2x/hand-care-logo-template-vector-icon-business-symbols.jpg" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+            Volunteer Portal</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="Opportunities.html">Opportunities</a></li>
+                <li class="nav-item"><a class="nav-link" href="Register.html">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="signup.html">Signup</a></li>
+                <li class="nav-item"><a class="nav-link" href="signin.html">Signin</a></li>
+                <li class="nav-item"><a class="nav-link" href="Hour Logging.html">Hour Logging</a></li>
+                <li class="nav-item"><a class="nav-link" href="Contact us.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content container mt-5">
+        <h2>Log Volunteer Hours</h2>
+
+        <!-- Form for Logging Hours -->
+        <form id="logForm">
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" class="form-control" id="date" required>
+            </div>
+            <div class="form-group">
+                <label for="hours">Hours:</label>
+                <input type="number" class="form-control" id="hours" min="1" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Log Hours</button>
+        </form>
+
+        <!-- Logged Hours List -->
+        <h3 class="mt-4">Logged Hours</h3>
+        <ul id="loggedHoursList" class="list-group">
+            <!-- Entries will be added here -->
+        </ul>
+
+    <!-- JavaScript for CRUD Operations -->
+   <script>
+    const logForm = document.getElementById("logForm"); // Get the form for logging hours.
+const loggedHoursList = document.getElementById("loggedHoursList"); // Get the list to display logged hours.
+
+// Listen for form submission
+logForm.addEventListener("submit", function(e) {
+    e.preventDefault(); // Prevent page refresh on form submission.
+    const date = document.getElementById("date").value; // Get entered date.
+    const hours = document.getElementById("hours").value; // Get entered hours.
+    if (date && hours) { // Check if both fields are filled.
+        addLogEntry(date, hours); // Add a new log entry.
+        logForm.reset(); // Clear the form fields.
+    }
+});
+
+// Function to add a new log entry
+    function addLogEntry(date, hours) {
+       const listItem = document.createElement("li"); // Create a new list item.
+       listItem.className = "list-group-item d-flex justify-content-between align-items-center"; // Set styling classes.
+       // Create content for the list item:
+       listItem.innerHTML = ` 
+        <span>${date}: ${hours} hours</span> 
+        <span> 
+            <button class="btn btn-warning btn-sm" onclick="editLogEntry(this)">Edit</button> 
+            <button class="btn btn-danger btn-sm" onclick="deleteLogEntry(this)">Delete</button> 
+        </span>
+    `;
+    loggedHoursList.appendChild(listItem); // Add the new item to the list.
+}
+
+// Function to delete a log entry
+    function deleteLogEntry(button) {
+       const listItem = button.closest("li"); // Find the closest list item.
+       loggedHoursList.removeChild(listItem); // Remove it from the list.
+}
+
+// Function to edit a log entry
+    function editLogEntry(button) {
+        const listItem = button.closest("li"); // Find the list item.
+        const [dateText, hoursText] = listItem.querySelector("span").textContent.split(": "); // Split text for date and hours.
+        const date = dateText.trim(); // Get date value.
+    const hours = hoursText.replace(" hours", "").trim(); // Get hours value.
+
+    // Prompt for new values
+    const newDate = prompt("Edit Date:", date); // Ask for new date.
+    const newHours = prompt("Edit Hours:", hours); // Ask for new hours.
+
+    if (newDate && newHours) { // If new values provided:
+        listItem.querySelector("span").textContent = `${newDate}: ${newHours} hours`; // Update displayed values.
+    }
+}
+   </script>
+    <script src="app.js"></script>
+
+    <!-- Fixed Footer -->
+    <footer class="custom-footer">
+        &copy;2024 Local Volunteer Matching Portal. All rights reserved.
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

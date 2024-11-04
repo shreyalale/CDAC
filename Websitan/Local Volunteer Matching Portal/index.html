@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Sets the text encoding to display characters correctly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page scales well on mobile -->
+    <title>Local Volunteer Matching Portal</title> <!-- Text that appears in the browser tab -->
+    <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/000/623/747/non_2x/hand-care-logo-template-vector-icon-business-symbols.jpg" type="image/jpg"> <!-- favicon-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!--imported bootstrap-->
+    <style>
+        /* Body styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #c6e2f9;
+            color: #333;
+        }
+        /* navbar styles */
+        .custom-navbar {
+            background-color: #2c587c; /* background color */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Adds a soft shadow */
+        }
+        .custom-navbar .navbar-brand, 
+        .custom-navbar .nav-link {
+            color: white !important; /* Makes navbar text white */
+        }
+        .custom-navbar .nav-link:hover {
+            color: hsl(207, 62%, 18%) !important; /* Light blue hover effect */
+        }
+        .custom-navbar .nav-link.active {
+            color: #333 !important; /* Darker color for active link */
+            font-weight: bold;
+        }
+        .navbar-toggler {
+            background-color: #40749f;  /* Button color on mobile view */
+            border:black; /* No border *//
+        }
+         /* Card styles */
+        .card-title, .card-text {
+            font-size: 0.95rem; /* Smaller text for card content */
+        }
+        .card {
+            height: 100%; /* Cards fill space evenly */
+        }
+        .card-img-top {
+            height: 200px; /* Set a fixed height for all images */
+            object-fit: cover; /* Ensure images cover the area without stretching */
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;  /* Spaces items in the card */
+            height: 180px; /* Set a fixed height for the card body */
+        }
+        
+        /* Adjustments for extra small screens */
+        @media (max-width: 576px) {
+            h2 {
+                font-size: 1.25rem; /* Smaller title on small screens */
+            }
+        }
+        .custom-footer {
+            background-color: #2c587c; /* Matching the navbar background color */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar --> 
+    <nav class="navbar navbar-expand-lg custom-navbar"> <!--used to style and configure the behavior of a navigation bar.-->
+        <a class="navbar-brand" href="index.html">
+            <img src="https://static.vecteezy.com/system/resources/previews/000/623/747/non_2x/hand-care-logo-template-vector-icon-business-symbols.jpg" alt="Logo" width="30" height="30" class="d-inline-block align-top"> <!-- Logo image -->
+            Volunteer Portal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span> <!-- Toggle button for mobile view -->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+             <!-- Navigation links -->
+            <ul class="navbar-nav ml-auto"> <!--classes that helps align and style navigation items in a navbar-->
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="Opportunities.html">Opportunities</a></li>
+                <li class="nav-item"><a class="nav-link" href="Register.html">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="signup.html">Signup</a></li>
+                <li class="nav-item"><a class="nav-link" href="signin.html">Signin</a></li>
+                <li class="nav-item"><a class="nav-link" href="Hour Logging.html">Hour Logging</a></li>
+                <li class="nav-item"><a class="nav-link" href="Contact us.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5"> <!--layout class that helps manage layout and spacing. -->
+        <h2 class="text-center">Welcome to the Volunteer Matching Portal</h2>
+        <p class="text-center">Find opportunities to contribute to your community!</p>
+
+        <!-- Volunteer Cards -->
+        <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">  <!-- Bootstrap classes used to create a responsive grid layout and add spacing-->
+                <div class="card"> <!--col-md-4: column width class on medium screens and larger, column should take 4 out of 12 grid columns           
+                                    col-sm-6: column width class on small screens, column will take 6 out of 12 grid columns
+                                    mb-4: margin bottom class, it adds spacing below the element with value of 4  -->
+                    <img src="https://bearsaver.com/cdn/shop/articles/Park_Clean_up_1024x1024.jpg?v=1691523743" class="card-img-top" alt="Park Cleanup">  <!-- Card image -->
+                    <div class="card-body">
+                        <h5 class="card-title">Clean the Park Initiative</h5> <!-- Card title -->
+                        <p class="card-text">Help keep our community clean by joining a park cleanup!</p>
+                        <a href="About.html" class="btn btn-primary">Learn More</a>  <!-- Button link -->
+                    </div> 
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card"> 
+                    <img src="https://thumbs.dreamstime.com/z/diverse-group-friends-cleaning-up-beach-collecting-trash-copy-space-actively-participating-307495801.jpg?ct=jpeg" class="card-img-top" alt="Beach Conservation">
+                    <div class="card-body">
+                        <h5 class="card-title">Beach Conservation Effort</h5>
+                        <p class="card-text">Protect marine life by cleaning up the beach.</p>
+                        <a href="About.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="https://thumbs.dreamstime.com/z/hispanic-woman-volunteering-food-bank-checking-inventory-list-warehouse-hispanic-woman-volunteering-food-bank-checking-327308069.jpg?ct=jpeg" class="card-img-top" alt="Community Food Drive">
+                    <div class="card-body">
+                        <h5 class="card-title">Community Food Drive</h5>
+                        <p class="card-text">Join us in distributing food to those in need.</p>
+                        <a href="About.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/close-up-picture-hand-holding-planting-sapling-plant_1150-28360.jpg?t=st=1730400077~exp=1730403677~hmac=ed72838bd90de03f3581464c1b8c6fba82db1eb63dc7dd215b8a6a375c946041&w=996" class="card-img-top" alt="Tree Planting Event">
+                    <div class="card-body">
+                        <h5 class="card-title">Tree Planting Event</h5>
+                        <p class="card-text">Help us plant trees and improve our environment.</p>
+                        <a href="About.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="https://photos.peopleimages.com/picture/202212/2571488-adoption-animal-care-and-black-woman-with-dog-looking-through-fence-gate-and-cage-at-dog-shelter.-pets-love-and-female-excited-to-choose-foster-and-support-family-pet-at-animal-shelter-or-kennel-fit_400_400.jpg" class="card-img-top" alt="Animal Shelter Support">
+                    <div class="card-body">
+                        <h5 class="card-title">Animal Shelter Support</h5>
+                        <p class="card-text">Assist in caring for animals at the local shelter.</p>
+                        <a href="About.html" class="btn btn-primary">Learn More</a>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4"> 
+                <div class="card">
+                    <img src="https://img.freepik.com/premium-photo/lively-community-garden-planting-day_1204896-61893.jpg?w=740" class="card-img-top" alt="Community Garden Project">
+                    <div class="card-body">
+                        <h5 class="card-title">Community Garden Project</h5>
+                        <p class="card-text">Join us in creating and maintaining a community garden.</p>
+                        <a href="About.html" class="btn btn-primary">Learn More</a>
+                    </div>           
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="custom-footer text-white text-center py-3"> <!--combination of classes used in Bootstrap to style the footer-->
+        &copy;2024 Local Volunteer Matching Portal. All rights reserved.
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
