@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Exercise: 3</h3>
+    <h3>Asynchronous Promise Chaining in JavaScript</h3>
+    <hr>
+    <script>
+        console.log("Q3.");
+        console.log("Program started");
+
+        const myPromise = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve({ data: "Hello, friend!", error: null });
+            }, 5000);
+        });
+
+        console.log(myPromise);
+        console.log("Program in progress...");
+
+        myPromise
+            .then((val) => {
+                console.log(val);
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve("First promise chain complete!");
+                    }, 2000);
+                });
+            })
+            .then((val) => {
+                console.log(val);
+                
+                // Start the second promise chain here
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        resolve("Second promise chain complete!");
+                    }, 10000);
+                });
+            })
+            .then((val) => {
+                console.log(val);
+            })
+            .catch((error) => {
+                console.error("Error in promise chain:", error);
+            });
+    </script>
+
+    
+    <h3>Bonus Exercise</h3>
+    <h3>Resolving Multiple Promises Simultaneously</h3>
+    <script>
+        console.log("Bonus Excercise ")
+        const promise1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(10);
+  }, 3000);
+});
+
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(20);
+  }, 5000);
+});
+
+Promise.all([promise1, promise2]).then((values) => {
+  const firstValue = values[0];
+  const secondValue = values[1];
+  console.log(values);
+  console.log(firstValue, secondValue);
+  console.log(firstValue + secondValue);
+});
+    </script>
+</body>
+</html>

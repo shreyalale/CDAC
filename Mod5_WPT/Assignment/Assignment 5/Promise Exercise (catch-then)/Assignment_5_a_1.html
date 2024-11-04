@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>1. Print out "Program started " at the start of your code.</h3>
+    <script>
+        console.log("Q1");
+        console.log("Program Started");
+
+        const myPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve();
+            }, 3000);
+
+            // This timeout is unnecessary as it won't be reached after resolve is called
+            // setTimeout(() => {
+            //     reject();
+            // }, 2000);
+        });
+
+        console.log(myPromise);
+        console.log("Program in progress...");
+
+        myPromise.then(() => {
+            console.log("Program complete");
+        });
+    </script>
+    <hr>
+    <h3>2. Create a promise which resolves after 3 seconds.</h3>
+    <script>
+        console.log("Q2");
+        console.log("Program started");
+
+        const my1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve();
+            }, 3000);
+        });
+
+        console.log(my1);
+        console.log("Program in progress...");
+
+        my1.then(() => {
+            console.log("Step 1 complete");
+
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve("Step 2 complete");
+                }, 6000);
+            });
+        }).then((val) => {
+            console.log(val);
+        });
+    </script>
+    <hr>
+
+</body>
+</html>
