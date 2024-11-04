@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h2>Exercise 1:
+            Create a function processData that takes two parameters: a string and a callback
+            function. Your task is to write a callback that converts the string to uppercase and
+            then call it within processData.</h2>
+            <hr>
+    <script>
+        function toUpperCase(str) {
+            return str.toUpperCase();
+        }
+        
+        function processData(inputString, callback){
+            const result = callback(inputString);
+            console.log(result);
+        }
+
+        processData("hello everyone, i am shreya lale.", toUpperCase);
+    </script>
+
+    <h2>Exercise 2:
+        Write a function forEachElement that accepts an array and a callback. This
+        function should apply the callback to each element of the array.</h2>
+        <hr>
+        <script>
+            function forEachElement(arr, callback) {
+                for(let i=0; i < arr.length; i++){
+                    callback(arr[i], i);
+                }
+            }
+
+            const numbers = [1, 2, 3, 4, 5];
+            forEachElement(numbers, function(element, index) {
+                console.log(`Index ${index}: ${element * 2}`);
+            });
+        </script>
+
+    <h2>Exercise 3:
+        Simulate a network request by creating a function fetchData that takes a URL and a
+        callback as parameters. Use setTimeout to simulate a delay and then call the
+        callback with a string representing a response.</h2>
+    <hr>
+    <script>
+        function fetchData(url, callback) {
+            console.log(`Fetching data from ${url}....`);
+
+            setTimeout(function() {
+                const response = `Response from ${url}`;
+                callback(response);
+            }, 2000);
+
+   }
+
+      fetchData("https://www.geeksforgeeks.org/", function(response) {
+           console.log(response);
+      });
+    </script>
+    <h2>Exercise 4:
+        Modify fetchData from Exercise 3 to include error handling.</h2>
+        <hr>
+        <script>
+            function fetchData(url, callback)
+            {
+                console.log(`Fetching data from ${url}`);
+            
+
+            setTimeout(function() {
+                const isError = Math.random() > 0.5;
+
+            if (isError) {
+                callback("Network error: Unable to fetch data");
+            } else {
+                const response = `Response from ${url}`;
+                callback(null, response);
+            }
+        }, 2000);
+    }
+
+    fetchData("https://www.geeksforgeeks.org/", function(error, response){
+        if(error) {
+            console.log(`Error: ${error}`);
+        } else {
+            console.log(response);
+        }
+    });
+        </script>
+
+        <h2> Exercise 5:
+            Using fetchData from Exercise 4, create another function processData that
+            simulates processing the fetched data. Chain these functions together using nested
+            callbacks.</h2>
+          <script>
+            function fetchData(url, callback) {
+                console.log(`Fetching data from ${url}...`);
+            
+           setTimeout(function() {
+            const isError = Math.random() > 0.5;  
+            if (isError){
+
+            } else {
+            const response = `Response from ${url}`;
+            callback(null, response);
+           }
+     }, 2000);
+ }
+        function processData(data, callback) {
+            console.log("Processing data....");
+        
+
+        setTimeout(function() {
+            const processedData = `${data} - processed`;
+            callback(processedData);
+        }, 1000);
+    }
+         
+        fetchData("https://www.geeksforgeeks.org/", function(error, response) {
+            if(error) {
+                console.log(`Error: ${error}`);
+            } else {
+                processData(response, function(result) {
+                    console.log(result);
+                });
+            }
+        });
+        </script>
+</body>
+</html>
