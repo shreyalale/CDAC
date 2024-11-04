@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myPromise = new Promise((resolve) => {
+           setTimeout(() => {
+            resolve("promise will resolve after 3 sec!");
+           }, 3000);
+        });
+
+        myPromise
+        .then((message) => {
+            console.log(message);
+        })
+        .catch((error) => {
+            console.error("Promise rejected:", error);
+        });
+    </script>
+</body>
+</html>
