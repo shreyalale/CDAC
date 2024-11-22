@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  
+  <display-name>day4.1</display-name>
+  
+  <!-- Welcome file configuration -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+  <!-- Servlet configuration for VoterRegistrationServlet -->
+  <servlet>
+    <servlet-name>VoterRegistrationServlet</servlet-name>
+    <servlet-class>com.cdac.pages.VoterRegistrationServlet</servlet-class>
+  </servlet>
+  
+  <!-- Servlet mapping to a specific URL pattern -->
+  
+
+</web-app>
