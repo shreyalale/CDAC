@@ -1,0 +1,11 @@
+D:\CDAC\.Net\Assignment_1\Library_System\LibLibrary\bin\Debug\net9.0\LibLibrary.deps.json
+D:\CDAC\.Net\Assignment_1\Library_System\LibLibrary\bin\Debug\net9.0\LibLibrary.dll
+D:\CDAC\.Net\Assignment_1\Library_System\LibLibrary\bin\Debug\net9.0\LibLibrary.pdb
+D:\CDAC\.Net\Assignment_1\Library_System\LibLibrary\obj\Debug\net9.0\LibLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\.Net\Assignment_1\Library_System\LibLibrary\obj\Debug\net9.0\LibLibrary.AssemblyInfoInputs.cache
+D:\CDAC\.Net\Assignment_1\Library_System\LibLibrary\obj\Debug\net9.0\LibLibrary.AssemblyInfo.cs
+D:\CDAC\.Net\Assignment_1\Library_System\LibLibrary\obj\Debug\net9.0\LibLibrary.csproj.CoreCompileInputs.cache
+D:\CDAC\.Net\Assignment_1\Library_System\LibLibrary\obj\Debug\net9.0\LibLibrary.dll
+D:\CDAC\.Net\Assignment_1\Library_System\LibLibrary\obj\Debug\net9.0\refint\LibLibrary.dll
+D:\CDAC\.Net\Assignment_1\Library_System\LibLibrary\obj\Debug\net9.0\LibLibrary.pdb
+D:\CDAC\.Net\Assignment_1\Library_System\LibLibrary\obj\Debug\net9.0\ref\LibLibrary.dll
