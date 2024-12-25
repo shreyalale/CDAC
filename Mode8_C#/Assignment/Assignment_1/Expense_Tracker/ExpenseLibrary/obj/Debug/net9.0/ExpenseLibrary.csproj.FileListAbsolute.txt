@@ -1,0 +1,11 @@
+D:\CDAC\.Net\Expense_Tracker\ExpenseLibrary\bin\Debug\net9.0\ExpenseLibrary.deps.json
+D:\CDAC\.Net\Expense_Tracker\ExpenseLibrary\bin\Debug\net9.0\ExpenseLibrary.dll
+D:\CDAC\.Net\Expense_Tracker\ExpenseLibrary\bin\Debug\net9.0\ExpenseLibrary.pdb
+D:\CDAC\.Net\Expense_Tracker\ExpenseLibrary\obj\Debug\net9.0\ExpenseLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\.Net\Expense_Tracker\ExpenseLibrary\obj\Debug\net9.0\ExpenseLibrary.AssemblyInfoInputs.cache
+D:\CDAC\.Net\Expense_Tracker\ExpenseLibrary\obj\Debug\net9.0\ExpenseLibrary.AssemblyInfo.cs
+D:\CDAC\.Net\Expense_Tracker\ExpenseLibrary\obj\Debug\net9.0\ExpenseLibrary.csproj.CoreCompileInputs.cache
+D:\CDAC\.Net\Expense_Tracker\ExpenseLibrary\obj\Debug\net9.0\ExpenseLibrary.dll
+D:\CDAC\.Net\Expense_Tracker\ExpenseLibrary\obj\Debug\net9.0\refint\ExpenseLibrary.dll
+D:\CDAC\.Net\Expense_Tracker\ExpenseLibrary\obj\Debug\net9.0\ExpenseLibrary.pdb
+D:\CDAC\.Net\Expense_Tracker\ExpenseLibrary\obj\Debug\net9.0\ref\ExpenseLibrary.dll
