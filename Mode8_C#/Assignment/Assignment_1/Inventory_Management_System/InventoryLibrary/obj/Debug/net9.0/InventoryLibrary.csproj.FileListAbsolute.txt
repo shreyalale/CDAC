@@ -1,0 +1,11 @@
+D:\CDAC\.Net\Assignment_1\Inventory_Management_System\InventoryLibrary\obj\Debug\net9.0\InventoryLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\.Net\Assignment_1\Inventory_Management_System\InventoryLibrary\obj\Debug\net9.0\InventoryLibrary.AssemblyInfoInputs.cache
+D:\CDAC\.Net\Assignment_1\Inventory_Management_System\InventoryLibrary\obj\Debug\net9.0\InventoryLibrary.AssemblyInfo.cs
+D:\CDAC\.Net\Assignment_1\Inventory_Management_System\InventoryLibrary\obj\Debug\net9.0\InventoryLibrary.csproj.CoreCompileInputs.cache
+D:\CDAC\.Net\Assignment_1\Inventory_Management_System\InventoryLibrary\bin\Debug\net9.0\InventoryLibrary.deps.json
+D:\CDAC\.Net\Assignment_1\Inventory_Management_System\InventoryLibrary\bin\Debug\net9.0\InventoryLibrary.dll
+D:\CDAC\.Net\Assignment_1\Inventory_Management_System\InventoryLibrary\bin\Debug\net9.0\InventoryLibrary.pdb
+D:\CDAC\.Net\Assignment_1\Inventory_Management_System\InventoryLibrary\obj\Debug\net9.0\InventoryLibrary.dll
+D:\CDAC\.Net\Assignment_1\Inventory_Management_System\InventoryLibrary\obj\Debug\net9.0\refint\InventoryLibrary.dll
+D:\CDAC\.Net\Assignment_1\Inventory_Management_System\InventoryLibrary\obj\Debug\net9.0\InventoryLibrary.pdb
+D:\CDAC\.Net\Assignment_1\Inventory_Management_System\InventoryLibrary\obj\Debug\net9.0\ref\InventoryLibrary.dll
