@@ -1,0 +1,14 @@
+D:\CDAC\.Net\Assignment_2\stringFrequency\bin\Debug\net9.0\stringFrequency.exe
+D:\CDAC\.Net\Assignment_2\stringFrequency\bin\Debug\net9.0\stringFrequency.deps.json
+D:\CDAC\.Net\Assignment_2\stringFrequency\bin\Debug\net9.0\stringFrequency.runtimeconfig.json
+D:\CDAC\.Net\Assignment_2\stringFrequency\bin\Debug\net9.0\stringFrequency.dll
+D:\CDAC\.Net\Assignment_2\stringFrequency\bin\Debug\net9.0\stringFrequency.pdb
+D:\CDAC\.Net\Assignment_2\stringFrequency\obj\Debug\net9.0\stringFrequency.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\.Net\Assignment_2\stringFrequency\obj\Debug\net9.0\stringFrequency.AssemblyInfoInputs.cache
+D:\CDAC\.Net\Assignment_2\stringFrequency\obj\Debug\net9.0\stringFrequency.AssemblyInfo.cs
+D:\CDAC\.Net\Assignment_2\stringFrequency\obj\Debug\net9.0\stringFrequency.csproj.CoreCompileInputs.cache
+D:\CDAC\.Net\Assignment_2\stringFrequency\obj\Debug\net9.0\stringFrequency.dll
+D:\CDAC\.Net\Assignment_2\stringFrequency\obj\Debug\net9.0\refint\stringFrequency.dll
+D:\CDAC\.Net\Assignment_2\stringFrequency\obj\Debug\net9.0\stringFrequency.pdb
+D:\CDAC\.Net\Assignment_2\stringFrequency\obj\Debug\net9.0\stringFrequency.genruntimeconfig.cache
+D:\CDAC\.Net\Assignment_2\stringFrequency\obj\Debug\net9.0\ref\stringFrequency.dll
