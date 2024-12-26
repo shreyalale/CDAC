@@ -1,0 +1,14 @@
+D:\CDAC\.Net\Assignment_2\frequency\obj\Debug\net9.0\frequency.GeneratedMSBuildEditorConfig.editorconfig
+D:\CDAC\.Net\Assignment_2\frequency\obj\Debug\net9.0\frequency.AssemblyInfoInputs.cache
+D:\CDAC\.Net\Assignment_2\frequency\obj\Debug\net9.0\frequency.AssemblyInfo.cs
+D:\CDAC\.Net\Assignment_2\frequency\obj\Debug\net9.0\frequency.csproj.CoreCompileInputs.cache
+D:\CDAC\.Net\Assignment_2\frequency\bin\Debug\net9.0\frequency.exe
+D:\CDAC\.Net\Assignment_2\frequency\bin\Debug\net9.0\frequency.deps.json
+D:\CDAC\.Net\Assignment_2\frequency\bin\Debug\net9.0\frequency.runtimeconfig.json
+D:\CDAC\.Net\Assignment_2\frequency\bin\Debug\net9.0\frequency.dll
+D:\CDAC\.Net\Assignment_2\frequency\bin\Debug\net9.0\frequency.pdb
+D:\CDAC\.Net\Assignment_2\frequency\obj\Debug\net9.0\frequency.dll
+D:\CDAC\.Net\Assignment_2\frequency\obj\Debug\net9.0\refint\frequency.dll
+D:\CDAC\.Net\Assignment_2\frequency\obj\Debug\net9.0\frequency.pdb
+D:\CDAC\.Net\Assignment_2\frequency\obj\Debug\net9.0\frequency.genruntimeconfig.cache
+D:\CDAC\.Net\Assignment_2\frequency\obj\Debug\net9.0\ref\frequency.dll
