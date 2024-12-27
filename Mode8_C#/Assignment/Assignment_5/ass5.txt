@@ -1,0 +1,39 @@
+Note: Keep Users table with id, firstname, lastname, email, and contact fields with some
+sample data for usage.
+------------------------------------------------------------------------------------------
+Step 1: Create a New ASP.NET Core MVC Project
+ Create a new ASP.NET Core MVC project:
+ In Visual Studio, select File > New > Project > ASP.NET Core Web App (ModelView-Controller).
+
+Step 2: Install Required NuGet Packages
+ You need some packages for user authentication and authorization:
+ mysql.Data using nuget package manager or using dotnet cli command
+
+Step 3: Add User class with FirstName, LastName, Email, Contact and Password
+properties in Models
+
+Step 4: Set up the Database Repository layer to insert and validate method.
+ Use Connected Data Access mode to validating user and inserting new user into
+Customers Table
+ Add IUserRepository interface
+ Add UserRepository calss with Validate and Insert method.
+ Implement Data Access Logic for above methods using Connected Data Access
+ADO.NET
+
+Step 5: Set up the Service layer to implement validate and register method.
+ Inject DataReposity into Service Layer class UserServer.cs using constructor
+dependency injection.
+
+Step 6: Create the AuthController
+ Inside Controllers, create a file AuthController.cs
+ Add Login and Register action method to AuthController with GET and POST HTTP
+verbs
+ Validate user using UserService Validate method using Constructor Dependency
+Injection to AuthController
+ Implement Registration of customer using UserService Insert method with injected
+service
+
+Step 7: Create Views for Login and Register
+ Create two views: Login.cshtml and Register.cshtml
+
+Step 8: Test the Application
